@@ -65,11 +65,11 @@ footer{text-align:center;padding:28px 10px 0;color:#9a5873;font-size:.9rem}
 
 <section class="panel">
   <h2>ركن الذكريات 📸</h2>
-  <p class="small">اضغطِي على كل مربع واختاري صورة من جهازك عشان تضيفي صوركم وذكرياتكم. الصور بتظهر عندك في الصفحة فقط.</p>
+  <p class="small">ذكريات جميلة 💗</p>
   <div class="grid">
-    <div class="photo"><label>＋ اختاري صورة 1<input type="file" accept="image/*" onchange="showPhoto(this)"></label></div>
-    <div class="photo"><label>＋ اختاري صورة 2<input type="file" accept="image/*" onchange="showPhoto(this)"></label></div>
-    <div class="photo"><label>＋ اختاري صورة 3<input type="file" accept="image/*" onchange="showPhoto(this)"></label></div>
+    <div class="photo"><img src="images/photo1.jpg" alt="ذكرى جميلة 1"></div>
+    <div class="photo"><img src="images/photo2.png" alt="ذكرى جميلة 2"></div>
+    <div class="photo"><img src="images/photo3.jpg" alt="ذكرى جميلة 3"></div>
   </div>
 </section>
 
@@ -86,12 +86,6 @@ footer{text-align:center;padding:28px 10px 0;color:#9a5873;font-size:.9rem}
 <footer>صُنِع بحب عشان يومك يبقى أحلى 💗</footer>
 </main>
 <script>
-function showPhoto(input){
- const file=input.files&&input.files[0]; if(!file)return;
- const reader=new FileReader();
- reader.onload=()=>{const box=input.parentElement.parentElement;box.innerHTML='';const img=document.createElement('img');img.src=reader.result;img.alt='ذكرى جميلة';box.appendChild(img)};
- reader.readAsDataURL(file);
-}
 const song=document.getElementById('birthdaySong');
 const musicBtn=document.getElementById('musicBtn');
 function toggleMusic(){
